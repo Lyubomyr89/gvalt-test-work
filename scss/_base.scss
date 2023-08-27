@@ -1,0 +1,71 @@
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+h1, .h1 {
+  margin-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.row-gap {
+  &-30 {
+    row-gap: 30px;
+  }
+
+  &-sm-30 {
+    @include media-breakpoint-up(sm) {
+      row-gap: 30px;
+    }
+  }
+
+  &-md-30 {
+    @include media-breakpoint-up(md) {
+      row-gap: 30px;
+    }
+  }
+
+  &-lg-30 {
+    @include media-breakpoint-up(lg) {
+      row-gap: 30px;
+    }
+  }
+
+  &-xl-30 {
+    @include media-breakpoint-up(xl) {
+      row-gap: 30px;
+    }
+  }
+
+  &-0 {
+    row-gap: 0;
+  }
+
+  &-sm-0 {
+    @include media-breakpoint-up(sm) {
+      row-gap: 0;
+    }
+  }
+
+  &-md-0 {
+    @include media-breakpoint-up(md) {
+      row-gap: 0;
+    }
+  }
+
+  &-lg-0 {
+    @include media-breakpoint-up(lg) {
+      row-gap: 0;
+    }
+  }
+
+  &-xl-0 {
+    @include media-breakpoint-up(xl) {
+      row-gap: 0;
+    }
+  }
+}

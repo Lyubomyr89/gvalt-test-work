@@ -1,0 +1,19 @@
+{
+  "name": "work-gvalt",
+  "version": "1.0.0",
+  "description": "Test work",
+  "author": "Liubomyr Horbatiuk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "bootstrap": "4.6.2",
+    "jquery": "3.7.0",
+    "popper.js": "1.16.1"
+  },
+  "devDependencies": {
+    "browser-sync": "~2.3.2"
+  }
+}

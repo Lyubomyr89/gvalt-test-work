@@ -1,0 +1,64 @@
+$font-family-base: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+$rism-dark: #161414;
+$rism-muted: #979797;
+$rism-muted-darker: #5B5B5B;
+$rism-text-xl: 3rem;
+$rism-text-md: 1.125rem;
+$rism-text-sm: 0.875rem;
+$rism-header_bg: $rism_dark;
+$rism-menu_color: rgba(#fff, .7);
+$rism-btn-color: #fff;
+$rism-border-radius: 12px;
+$rism-border-radius-img: 24px;
+$enable-responsive-font-sizes: true;
+
+$theme-colors: (
+        "rism-dark":$rism-dark,
+        "rism-muted":$rism-muted,
+        "rism-muted-darker":$rism-muted-darker
+);
+
+$spacer: 1rem !default;
+$spacers: (
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        32px: ($spacer * 2),
+        5: ($spacer * 3),
+        6: ($spacer * 5)
+);
+
+$navbar-brand-margin-end: 0;
+$navbar-padding-y: 0.375rem;
+$navbar-nav-link-padding-x: 1.5rem;
+$navbar-brand-padding-y: 0;
+$nav-link-padding-y: 0;
+$nav-link-font-size: $rism-text-sm;
+$nav-link-font-weight: 400;
+
+$primary: #7B61FF;
+$primary-muted: #F6F4FF;
+
+$btn-padding-y: 1.4rem;
+$btn-padding-x: 2.5rem;
+$btn-font-weight: 500;
+$border-radius: 0.75rem;
+
+//h1
+$h1-font-size: 3rem;
+
+// Form
+$input-font-weight: 500;
+$input-btn-padding-y: 0;
+$input-btn-padding-x: .75rem;
+$input-color: $rism-dark;
+$input-placeholder-color: $rism-dark;
+$input-border-color: transparent;
+$input-border-radius: 0;
+
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+        xxl: 1360px
+);

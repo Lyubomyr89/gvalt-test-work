@@ -1,0 +1,99 @@
+.btn {
+  color: $rism-btn-color;
+
+  &:hover,
+  &:focus {
+    color: $rism-btn-color;
+  }
+}
+
+.link-view-all {
+  display: inline-flex;
+  align-items: center;
+  border-radius: $rism-border-radius;
+  padding: 10px;
+  background-color: $primary-muted;
+  min-width: fit-content;
+
+  &:hover::after {
+    transform: translateX(4px);
+  }
+
+  &::after {
+    content: url("../images/icons/arrow.svg");
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    transition: all .2s linear;
+  }
+}
+
+//Form
+form label {
+  padding-left: $input-btn-padding-x;
+  padding-right: $input-btn-padding-x;
+  margin-bottom: 0;
+  font-size: $rism-text-sm;
+  line-height: 1.42;
+  color: $rism-muted;
+}
+
+.form-control {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+form.was-validated .form-control:invalid, form.was-validated .form-control.is-invalid {
+  border-color: #dc3545;
+  padding-right: 1.5em !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.375em center;
+  background-size: 0.75em 0.75em;
+}
+
+form.was-validated .form-control.is-invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+}
+
+.rism-input {
+  font-weight: 500;
+  color: $rism-dark;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-weight: inherit;
+    color: inherit;
+  }
+}
+
+.rism-select {
+  text-align: left;
+  font-weight: 500;
+  color: $rism-dark;
+  height: 24px;
+  background-image: none;
+  border-radius: 0 !important;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+
+  &::placeholder {
+    font-weight: inherit;
+    color: inherit;
+  }
+}
+
+.alert {
+  top: 20px;
+  right: 20px;
+}

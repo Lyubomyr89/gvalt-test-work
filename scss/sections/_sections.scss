@@ -1,0 +1,78 @@
+.section {
+  &:first-of-type {
+    padding-top: 120px;
+  }
+
+  padding-top: 60px;
+
+  &:not(:last-of-type) {
+    padding-bottom: 60px;
+  }
+
+  &-title-wrapper {
+    margin-bottom: 64px;
+
+    > .section-title {
+      margin-bottom: 0;
+    }
+  }
+
+  &-title {
+    margin-bottom: 64px;
+  }
+
+  .card-img {
+    display: block;
+    overflow: hidden;
+    border-radius: $rism-border-radius-img;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      -ms-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+img.rism-rounded-img {
+  border-radius: $rism-border-radius-img;
+}
+
+.hotels,
+.destinations {
+  .name {
+    font-size: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+}
+
+.jq-star-svg {
+  display: block;
+}
+
+.iti__selected-flag{
+  padding-left: 12px;
+}
+
+@import "hotels";
+@import "advice";
+@import "about-us";
+@import "contact-us";

@@ -1,0 +1,94 @@
+header {
+  &.header {
+    padding-top: 32px;
+    padding-bottom: 120px;
+    background: $rism-header-bg url(../images/bg-header.jpg) no-repeat center;
+    background-size: cover;
+  }
+}
+
+.navbar {
+  margin-bottom: 11.5rem;
+}
+
+.nav {
+  &-item {
+    @include media-breakpoint-down(md) {
+      margin-top: 10px;
+      font-size: 20px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &-link {
+    line-height: 1.4;
+    color: $rism-menu-color;
+
+    &:hover {
+      color: white;
+    }
+    @include media-breakpoint-only(lg) {
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+  }
+}
+
+//User info
+.user {
+  &-info {
+    font-size: $rism-text-sm;
+  }
+
+  &-avatar {
+    padding-left: 0.5rem;
+    min-width: 48px;
+  }
+}
+
+.notification {
+  width: 12px;
+  height: 12px;
+  right: 0;
+  top: 0;
+  border: 1px solid $rism-dark;
+  background-color: #ff0000;
+  transition: all .2s linear;
+  transform: scale(0);
+
+  &.active {
+    transform: scale(1);
+  }
+}
+
+// Title
+.title-wrapper {
+  margin-bottom: 11.5rem;
+}
+
+// Search form
+.search {
+  &-form {
+    border-radius: $rism-border-radius;
+
+    button.search {
+      @extend .btn, .btn-primary;
+      border-radius: $rism-border-radius;
+      padding: 18px 60px;
+      @include media-breakpoint-up(lg) {
+        padding: 28%;
+      }
+      @include media-breakpoint-up(xl) {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+    }
+  }
+}
+
+.datepicker-dropdown{
+  padding: 4px 10px;
+}

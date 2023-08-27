@@ -1,0 +1,15 @@
+.hotels {
+  .name{
+    margin-bottom: 14px;
+  }
+
+  .location {
+    &::before {
+      content: url(../images/icons/location.svg);
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+    }
+  }
+}

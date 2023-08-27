@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2rism</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="./css/star-rating-svg.css">
+    <link rel="stylesheet" href="./css/intlTelInput.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="bg-body ">
+<header class="header text-white">
+    <div class="container">
+        <nav class="navbar navbar-dark navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="./images/logo.svg" alt="logo" width="88" height="36">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav text-center text-lg-left mb-4 mb-lg-0 m-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">restaurants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact</a>
+                    </li>
+                </ul>
+                <div class="user-info d-flex justify-content-center align-items-center">
+                    <div class="">
+                        <span class="d-block text-white-50">Holla,</span>
+                        <span class="user-name d-block text-white">Ales Nesetril</span>
+                    </div>
+                    <div class="user-avatar position-relative">
+                        <img src="./images/avatar.png"
+                             class="avatar rounded-circle"
+                             alt="avatar"
+                             width="48"
+                             height="48">
+                        <span class="notification position-absolute d-block rounded-circle active"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="title-wrapper text-center">
+            <h1 class="title">Discover the most engaging places</h1>
+            <a href="#" class="btn btn-primary">
+                Discover on 3D Globe
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-11 mx-auto text-rism-dark">
+                <form name="search" method="get" action="#"
+                      class="row px-lg-2 py-4 search-form bg-white align-items-center">
+                    <div class="mb-3 mb-lg-0 col-sm-6 col-md-3 col-lg-3">
+                        <div class="location d-flex align-items-center">
+                            <img src="./images/search/map-pin.svg" alt="map pin" width="24" height="24">
+                            <div class="input-group flex-column ml-3">
+                                <div class="input-group-prepend">
+                                    <label class="rism-label mb-0 pl-0"
+                                           for="location">Location</label>
+                                </div>
+
+                                <div class="input-group">
+                                    <input type="text" placeholder="Explore nearby destinations" id="location"
+                                           class="rism-input w-100 border-0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 mb-lg-0 col-sm-6 col-md-3 col-lg-3">
+                        <div class="activity d-flex align-items-center">
+                            <img src="./images/search/bicycle.svg" alt="bicycle" width="24" height="24">
+                            <div class="input-group flex-column ml-3">
+                                <div class="input-group-prepend">
+                                    <label class="rism-label mb-0 pl-0" for="inputGroupSelect00">Activity</label>
+                                </div>
+                                <select class="rism-select custom-select search-information-selection w-100 border-0 p-0"
+                                        id="inputGroupSelect00">
+                                    <option selected>All Activities</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 mb-lg-0 col-sm-6 col-md-3 col-lg-3">
+                        <div class="calendar d-flex align-items-center">
+                            <img src="./images/search/calendar-event.svg" alt="calendar" width="24" height="24">
+                            <div class="input-group flex-column ml-3">
+                                <div class="input-group-prepend">
+                                    <label class="rism-label mb-0 pl-0"
+                                           for="datepicker-field">When</label>
+                                </div>
+
+                                <div class="input-group date" id="datepicker">
+                                    <label class="mb-0 pl-0">
+                                        <input id="datepicker-field" type="text" placeholder="Choose a Date"
+                                               class="rism-input border-0">
+                                    </label>
+                                    <span class="input-group-append"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 mb-lg-0 col-sm-6 col-md-3 col-lg-2">
+                        <div class="guests d-flex align-items-center">
+                            <img src="./images/search/guest.svg" alt="guest" width="24" height="24">
+                            <div class="input-group flex-column ml-3">
+                                <div class="input-group-prepend">
+                                    <label class="rism-label mb-0 pl-0" for="inputGroupSelect02">Guests</label>
+                                </div>
+                                <select class="rism-select custom-select search-information-selection w-100 border-0 p-0"
+                                        id="inputGroupSelect02">
+                                    <option selected value="1">1 guest</option>
+                                    <option value="2">2 guests</option>
+                                    <option value="3">3 guests</option>
+                                    <option value="4">4 guests</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 text-center text-lg-left">
+                        <button type="submit" title="search" class="search">
+                            <img src="./images/search/search.svg" alt="search" width="24" height="24">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="text-rism-dark">
+    <section class="section destinations">
+        <div class="container">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="row row-gap-30 row-gap-xl-0">
+                <div class="col-6 col-sm-4 col-xl-2 destination-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/popular/1.png" alt="Big Sur">
+                        </a>
+                    </div>
+                    <h4 class="name mb-0">Big Sur</h4>
+                    <div class="location text-rism-muted">California, USA</div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-2 destination-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/popular/2.png" alt="Prescott">
+                        </a>
+                    </div>
+                    <h4 class="name mb-0">Prescott</h4>
+                    <div class="location text-rism-muted">Arizona, USA</div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-2 destination-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/popular/3.png" alt="Fort Mayers">
+                        </a>
+                    </div>
+                    <h4 class="name mb-0">Fort Mayers</h4>
+                    <div class="location text-rism-muted">Florida, USA</div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-2 destination-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/popular/4.png" alt="Tucson">
+                        </a>
+                    </div>
+                    <h4 class="name mb-0">Tucson</h4>
+                    <div class="location text-rism-muted">Arizona, USA</div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-2 destination-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/popular/5.png" alt="St. Joseph">
+                        </a>
+                    </div>
+                    <h4 class="name mb-0">St. Joseph</h4>
+                    <div class="location text-rism-muted">Michigan, USA</div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-2 destination-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/popular/6.png" alt="Madrid">
+                        </a>
+                    </div>
+                    <h4 class="name  mb-0">Madrid</h4>
+                    <div class="location text-rism-muted">Spain</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section hotels">
+        <div class="container">
+            <div class="section-title-wrapper d-flex justify-content-between align-items-center">
+                <h2 class="section-title">Hotels and Restaurants</h2>
+                <a href="#" class="link-view-all">View all</a>
+            </div>
+            <div class="row row-gap-30 row-gap-lg-0">
+                <div class=" col-sm-6 col-lg-3 hotel-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/hotel/1.png" alt="Monastero Santa Rosa Hotel & Spa"
+                                 class="rism-rounded-img">
+                        </a>
+                    </div>
+                    <h4 class="name">Monastero Santa Rosa Hotel & Spa</h4>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="location text-rism-muted">Salerno, Italy</div>
+                        <div class="hotels-rating d-flex" data-rating="2.5"></div>
+                    </div>
+                </div>
+                <div class=" col-sm-6 col-lg-3 hotel-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/hotel/2.png" alt="Grand Hotel Tremezzo" class="rism-rounded-img">
+                        </a>
+                    </div>
+                    <h4 class="name">Grand Hotel Tremezzo</h4>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="location text-rism-muted">Lake Como, Italy</div>
+                        <div class="hotels-rating d-flex" data-rating="2"></div>
+                    </div>
+                </div>
+                <div class=" col-sm-6 col-lg-3 hotel-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/hotel/3.png" alt="The Oberoi Udaivilas, Udaipur"
+                                 class="rism-rounded-img">
+                        </a>
+                    </div>
+                    <h4 class="name">The Oberoi Udaivilas, Udaipur</h4>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="location text-rism-muted">Udaipur, India</div>
+                        <div class="hotels-rating d-flex" data-rating="3.5"></div>
+                    </div>
+                </div>
+                <div class=" col-sm-6 col-lg-3 hotel-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/hotel/4.png" alt="AKA Beverly Hills" class="rism-rounded-img">
+                        </a>
+                    </div>
+                    <h4 class="name">AKA Beverly Hills</h4>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="location text-rism-muted">Los Angeles, United States</div>
+                        <div class="hotels-rating d-flex" data-rating="4.5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section advice">
+        <div class="container">
+            <div class="section-title-wrapper d-flex justify-content-between align-items-center">
+                <h2 class="section-title">Travel Tips and Advice</h2>
+                <a href="#" class="link-view-all">View all</a>
+            </div>
+            <div class="row row-gap-30 row-gap-lg-0">
+                <article class="advice-item col-lg-6">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4 col-lg-6 text-center text-sm-left mb-4 mb-sm-0">
+                            <a href="#" class="advice-item-img">
+                                <img src="./images/articles/1.png" alt="Monastero Santa Rosa Hotel & Spa"
+                                     class="rism-rounded-img">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-8 col-lg-6 d-flex flex-column">
+                            <header class="advice-header">
+                                <h3 class="advice-item-title mb-auto">East Village Ice Cream Crawl</h3>
+                            </header>
+                            <div class="advice-item-content text-rism-muted">
+                                <p>We will stop at five different world-class ice cream shops on this 1.5 mile 1.5 hour
+                                    tour. At each ice cream store we'll explore the story behind the business and see
+                                    what
+                                    makes the ice cream unique as you savor every…</p>
+                            </div>
+                            <footer class="advice-footer text-rism-muted mt-auto">
+                                <span class="date">Today</span>
+                                <span class="author">Maria Philips</span>
+                                <span class="comments">2</span>
+                            </footer>
+                        </div>
+                    </div>
+                </article>
+                <article class="advice-item col-lg-6">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4 col-lg-6 text-center text-sm-left mb-4 mb-sm-0">
+                            <a href="#" class="advice-item-img">
+                                <img src="./images/articles/1.png" alt="Monastero Santa Rosa Hotel & Spa"
+                                     class="rism-rounded-img">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-8 col-lg-6 d-flex flex-column">
+                            <header class="advice-header">
+                                <h3 class="advice-item-title mb-auto">Brooklyn Bridge cinematic photo walk</h3>
+                            </header>
+                            <div class="advice-item-content text-rism-muted">
+                                <p>This experience takes place at the Brooklyn Bridge Park and Brooklyn Bridge, but I’m
+                                    always open to capture clients at different locations upon request for an additional
+                                    charge. </p>
+                            </div>
+                            <footer class="advice-footer text-rism-muted mt-auto">
+                                <span class="date">Today</span>
+                                <span class="author">James Calzoni</span>
+                                <span class="comments">17</span>
+                            </footer>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="section activities">
+        <div class="container">
+            <div class="section-title-wrapper d-flex justify-content-between align-items-center">
+                <h2 class="section-title">Activities</h2>
+                <a href="#" class="link-view-all">View all</a>
+            </div>
+            <div class="row row-gap-30 row-gap-lg-0">
+                <div class="col-sm-6 col-lg-3 activities-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/activities/1.png" alt="Sailing"
+                                 class="rism-rounded-img">
+                        </a>
+                    </div>
+                    <h4 class="name">Sailing</h4>
+                </div>
+                <div class="col-sm-6 col-lg-3 activities-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/activities/2.png" alt="Climbing"
+                                 class="rism-rounded-img">
+                        </a>
+                    </div>
+                    <h4 class="name">Climbing</h4>
+                </div>
+                <div class="col-sm-6 col-lg-3 activities-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/activities/3.png" alt="Skiing"
+                                 class="rism-rounded-img">
+                        </a>
+                    </div>
+                    <h4 class="name">Skiing</h4>
+                </div>
+                <div class="col-sm-6 col-lg-3 activities-card">
+                    <div class="mb-2">
+                        <a href="#" class="card-img">
+                            <img src="./images/activities/4.png" alt="Hiking"
+                                 class="rism-rounded-img">
+                        </a>
+                    </div>
+                    <h4 class="name">Hiking</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section about-us">
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-10 mx-md-auto">
+                    <div class="row align-items-center flex-sm-row-reverse">
+                        <div class=" col-sm-6 mb-4 mb-sm-0">
+                            <img src="./images/about-us/1.png" alt="Image"
+                                 class="rism-rounded-img">
+                        </div>
+                        <div class=" col-sm-6">
+                            <h2 class="section-title">About Us</h2>
+                            <p class="text-rism-muted-darker">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Suspendisse a sapien justo. Nulla
+                                facilisis tristique imperdiet. Nullam a placerat odio. Sed in ex augue. Aliquam porta
+                                consectetur lorem sit amet ultrices. Class aptent taciti sociosqu ad litora torquent per
+                                conubia nostra, per inceptos himenaeos.</p>
+                            <a href="#" class="link-view-all">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 mx-md-auto">
+                    <h2 class="section-title">Contact us</h2>
+                    <form id="contact-us"
+                          class="position-relative needs-validation"
+                          method="post"
+                          name="contactUs"
+                          novalidate>
+                        <div class="form-row">
+                            <div class="col-sm-6 col-xl-3 mb-3 d-flex align-items-center">
+                                <img src="./images/icons/user.svg" alt="First name" width="24" height="24">
+                                <div class="pl-1">
+                                    <div>
+                                        <label for="first-name">First name</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text"
+                                               name="firstName"
+                                               class="form-control"
+                                               id="first-name"
+                                               placeholder="First name"
+                                               minlength="2"
+                                               maxlength="40"
+                                               required>
+                                        <div class="invalid-feedback">
+                                            Invalid field!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3 mb-3 d-flex align-items-center">
+                                <img src="./images/icons/user.svg" alt="First name" width="24" height="24">
+                                <div class="pl-1">
+                                    <div>
+                                        <label for="last-name">Last name</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text"
+                                               name="lastName"
+                                               class="form-control"
+                                               id="last-name"
+                                               placeholder="Last name"
+                                               minlength="2"
+                                               maxlength="40"
+                                               required>
+                                        <div class="invalid-feedback">
+                                            Invalid field!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3 mb-3 d-flex align-items-center">
+                                <img src="./images/icons/email.svg" alt="Email" width="24" height="24">
+                                <div class="pl-1">
+                                    <div>
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="email"
+                                               name="email"
+                                               class="form-control"
+                                               id="email"
+                                               aria-describedby="email"
+                                               placeholder="Enter email"
+                                               pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                                               required>
+                                        <div class="invalid-feedback">
+                                            Invalid field!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3 mb-3 d-flex align-items-center">
+                                <img src="./images/icons/phone.svg" alt="Phone" width="24" height="24">
+                                <div class="pl-1">
+                                    <div>
+                                        <label for="phone">Phone</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="tel"
+                                               name="phone"
+                                               class="form-control"
+                                               id="phone"
+                                               aria-describedby="phone"
+                                               placeholder="Enter your phone number"
+                                               required>
+                                        <div class="invalid-feedback">
+                                            Invalid field!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                        <div class="spinner-container position-absolute w-100 h-100 d-flex align-items-center
+                                justify-content-center invisible opacity-0">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container text-center text-lg-left">
+        <div class="row">
+            <div class="mb-32px col-lg-3 mb-lg-0">
+                <a href="#" class="d-block mb-3">
+                    <img src="./images/logo-footer.svg" alt="logo" width="88">
+                </a>
+                <p class="text-rism-muted lg-32px">We always make our customers happy by providing as many choises as
+                    possible</p>
+                <ul class="footer-social list-unstyled d-flex justify-content-center justify-content-lg-start">
+                    <li>
+                        <a href="#" title="Facebook">
+                            <img src="./images/icons/social/fb.svg" alt="Facebook" width="32" height="32">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Twitter">
+                            <img src="./images/icons/social/tw.svg" alt="Twitter" width="32" height="32">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="YouTube">
+                            <img src="./images/icons/social/yt.svg" alt="YouTube" width="32" height="32">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-5 mb-32px mb-lg-0">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h5 class="footer-subtitle">About</h5>
+                        <ul class="footer-menus list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="text-rism-muted">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-rism-muted">Features</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-rism-muted">News</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-rism-muted">Menu</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5 class="footer-subtitle">Company</h5>
+
+                        <ul class="footer-menus list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="text-rism-muted">Why 2rism</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-rism-muted">Partner With Us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-rism-muted">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-rism-muted">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5 class="footer-subtitle">Support</h5>
+
+                        <ul class="footer-menus list-unstyled mb-0">
+                            <li>
+                                <a href="#" class="text-rism-muted">Account</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-rism-muted">Support Center</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-rism-muted">Feedback</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-rism-muted">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mx-auto mx-lg-0">
+                <h5 class="footer-subtitle">Subscribe on our destination review newsletters</h5>
+                <form class="form-subscribe d-flex justify-content-center justify-content-lg-start flex-lg-wrap align-items-md-center needs-validation"
+                      name="subscribe"
+                      action="#"
+                      method="post">
+                    <div class="subscribe d-flex align-items-center mr-3">
+                        <img src="./images/icons/email.svg" alt="email" width="24" height="24">
+                        <div class="pl-1">
+                            <div class="text-left">
+                                <label for="subscribe">Your Email</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email"
+                                       placeholder="johndoe@gmail.com"
+                                       class="form-control"
+                                       id="subscribe"
+                                       required
+                                       pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                                <div class="invalid-feedback">
+                                    Invalid field!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mx-lg-auto p-0">
+                        <img src="./images/icons/submit-arrow.svg" alt="Submit" width="24" height="24">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer -->
+
+<!-- Alerts -->
+<div id="form-message" class="custom-alert position-fixed alert  collapse" role="alert">
+    <strong id="form-message-text">The form has been sent successfully. Thank you.</strong>
+    <button type="button" class="close pl-1" data-hidden="#form-message" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<!-- Alerts -->
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/bootstrap-datepicker.min.js"></script>
+<script src="./js/jquery.star-rating-svg.min.js"></script>
+<script src="./js/intlTelInput.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+.advice {
+  &-header {
+    margin-bottom: 1rem;
+  }
+
+  &-footer {
+    font-size: 12px;
+
+    > span {
+      display: inline-flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+
+      &::before {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+      }
+
+      &.date::before {
+        content: url("../images/icons/calendar.svg");
+      }
+
+      &.author::before {
+        content: url("../images/icons/author.svg");
+      }
+
+      &.comments::before {
+        content: url("../images/icons/communication.svg");
+      }
+    }
+  }
+}
